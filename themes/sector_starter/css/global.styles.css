@@ -2962,6 +2962,8 @@ select.input-sm, .input-group-sm > select.form-control, .input-group-sm > select
 
 .gallery--carousel .action--information::before { background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='2' height='12' viewBox='0 0 2 12' xmlns='http://www.w3.org/2000/svg' fill='%23FFFFFF'%3E%3Cpath d='M0 4h2v8h-2v-8zm0-4h2v2h-2v-2z'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: 0 0; background-size: cover; height: 18px; width: 3px; top: 20px; left: 29px; }
 
+@media (max-width: 991px) { .gallery--carousel .slick__slide { display: -webkit-box; display: -ms-flexbox; display: flex; -webkit-box-orient: vertical; -webkit-box-direction: normal; -ms-flex-direction: column; flex-direction: column; -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; } }
+
 @media (min-width: 992px) { .gallery--carousel .slick { display: -ms-grid; display: grid; -ms-grid-rows: 100%; grid-template-rows: 100%; -ms-grid-columns: 100%; grid-template-columns: 100%; } }
 
 @media (min-width: 992px) { .gallery--carousel .slick > .slick__slider { -ms-grid-row: 1; -ms-grid-row-span: 1; grid-row: 1 / 2; -ms-grid-column: 1; -ms-grid-column-span: 1; grid-column: 1 / 2; } }
