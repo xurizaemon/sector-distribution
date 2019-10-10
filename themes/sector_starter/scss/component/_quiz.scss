@@ -1,0 +1,62 @@
+
+.quiz__answer {
+  padding: 20px;
+  border: 1px solid $brand-gray-light;
+  margin-top: 10px;
+  cursor: pointer;
+  position: relative;
+  font-size: 16px;
+  @include respond-to(tablet-and-up) {
+    padding: 30px;
+  }
+  &.quiz__result {
+    padding: 20px 20px 20px 50px;
+    @include respond-to(tablet-and-up) {
+      padding: 30px 30px 30px 64px;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      top: 22px;
+      left: 18px;
+      @include respond-to(tablet-and-up) {
+        top: 32px;
+        left: 25px;
+      }
+    }
+    &.is-correct {
+      background: tint($brand-success,90%);
+      outline: 3px solid $brand-success;
+      outline-offset: -3px;
+      &::before {
+        background: svg-load('../images/icons/icon--check.svg', fill=#{$brand-success});
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        height: 15px;
+        width: 20px;
+      }
+    }
+    &.is-incorrect {
+      background: tint($brand-danger,90%);
+      outline: 3px solid $brand-danger;
+      outline-offset: -3px;
+      &::before {
+        background: svg-load('../images/icons/icon--close-alternate.svg', fill=#{$brand-danger});
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        height: 17px;
+        width: 17px;
+      }
+    }
+  }
+  &:hover {
+    border: 1px solid $gray;
+  }
+}
+
+.quiz__feedback {
+  margin: $spacing-half 0;
+  @include respond-to(tablet-and-up) {
+    margin: $spacing-base 0;
+  }
+}
