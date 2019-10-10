@@ -54,3 +54,11 @@
     @extend %has-margin-top-base;
   }
 }
+
+.meta--more {
+  .action {
+    + .action {
+      margin-top: $spacing-base;
+    }
+  }
+}

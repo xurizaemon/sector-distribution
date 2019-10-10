@@ -33,6 +33,21 @@
   &:visited {
     color: $white;
   }
+  &.has-back-arrow {
+    position: relative;
+    padding-left: 26px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 12px;
+      left: 10px;
+      background: svg-load('../images/icons/arrow--mini-left.svg', fill=#FFFFFF);
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      height: 11px;
+      width: 6px;
+    }
+  }
 }
 .btn-expand {
   display: flex;
@@ -56,3 +71,5 @@
     width: 11px;
   }
 }
+
+

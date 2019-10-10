@@ -113,3 +113,34 @@
     }
   }
 }
+
+.list--index {
+  .view-content {
+    > .list__group {
+      width: 100%;
+      margin-bottom: 10px;
+      display: inline-block;
+      @include respond-to(wide-large-and-up) {
+        margin-top: 50px;
+      }
+      > h3 {
+        font-weight: 600;
+        > a {
+          color: $brand-blue-gray;
+        }
+      }
+      > ul {
+        margin-top: $spacing-base;
+        > li {
+          > a {
+            display: block;
+            line-height: 1.4;
+            white-space: normal;
+            margin: 0;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

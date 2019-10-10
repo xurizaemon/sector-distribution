@@ -130,3 +130,38 @@
     outline-offset: 0;
   }
 }
+
+.action--pager-next,
+.action--pager-previous {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  .prose & {
+    text-decoration: none;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    height: 13px;
+    width: 17px;
+    top: 6px;
+    left: 0;
+  }
+  > span {
+    display: block;
+  }
+}
+
+.action--pager-next {
+  &:before {
+    background: svg-load('../images/icons/arrow--sign-right.svg', fill=#204ad4);
+  }
+}
+
+.action--pager-previous {
+  &:before {
+    background: svg-load('../images/icons/arrow--sign-left.svg', fill=#204ad4);
+  }
+}
